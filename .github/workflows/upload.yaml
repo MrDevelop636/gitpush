@@ -14,3 +14,4 @@ jobs:
         server: s1.ct8.pl
         username:  ${{ secrets.USERNAME }}
         password: ${{ secrets.USERPASSWORD }}
+        server-dir: /public_html/
