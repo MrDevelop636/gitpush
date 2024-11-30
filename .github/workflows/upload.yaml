@@ -25,8 +25,8 @@ jobs:
         id: upload-to-ftp
         with:
           files: ${{steps.set-result.outputs.result}}
-          ftpUsername: USERNAME
-          ftpPassword: USERPASSWORD
-          ftpHostname: HOSTNAME
+          ftpUsername: ${{ secrets.USERNAME }}
+          ftpPassword: ${{ secrets.USERPASSWORD }}
+          ftpHostname: ${{ secrets.HOSTNAME }}
           src: /
           dest: '/'
