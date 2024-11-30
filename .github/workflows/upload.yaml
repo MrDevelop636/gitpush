@@ -1,16 +1,16 @@
-name: Deploy via ftp
 on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
-    name: Deploy
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: genietim/ftp-action@releases/v4
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        host: ${{ secrets.HOSTNAME }}
-        user: ${{ secrets.USERNAME }}
+        server: ${{ secrets.HOSTNAME }}
+        username:  ${{ secrets.USERNAME }}
         password: ${{ secrets.USERPASSWORD }}
-        localDir: "/"
-        remoteDir: "/"
