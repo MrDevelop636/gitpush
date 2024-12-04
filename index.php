@@ -1,4 +1,4 @@
-<h1>It work's</h1>
+<h1>Server works</h1>
 <?php
 phpinfo();
 ?>
